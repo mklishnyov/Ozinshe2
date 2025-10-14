@@ -54,4 +54,7 @@ dependencies {
     val nav_version = "2.9.5"
     implementation("androidx.navigation:navigation-fragment:${nav_version}")
     implementation("androidx.navigation:navigation-ui:${nav_version}")
+
+    implementation ("com.tbuonomo:dotsindicator:4.2")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
 }
