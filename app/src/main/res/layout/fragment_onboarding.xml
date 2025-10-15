@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".OnboardingFragment">
+    tools:context=".presentation.onboarding.OnboardingFragment">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2WelcomeFragment"
+        android:id="@+id/viewPager2OnboardingFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSkipOnboardingFragment"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_gravity="end"
@@ -21,6 +22,7 @@
         android:text="Өткізу"
         android:textAllCaps="false"
         android:textSize="12dp"
+        android:textColor="@color/grey_900"
         android:fontFamily="@font/sf_medium"
         android:gravity="center"/>
 
@@ -42,6 +44,7 @@
             app:selectedDotColor="@color/primary_300"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNextOnboardingFragment"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_gravity="bottom"
@@ -54,7 +57,7 @@
             android:textColor="@color/white"
             android:layout_marginTop="24dp"
             android:backgroundTint="@color/primary_500"
-            android:layout_marginBottom="38dp"
+            android:layout_marginBottom="42dp"
             android:layout_marginHorizontal="24dp" />
     </LinearLayout>
 </FrameLayout>
