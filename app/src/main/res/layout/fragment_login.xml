@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Login" />
+    <ImageButton
+        android:id="@+id/btnBackLoginFragment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_back"
+        android:backgroundTint="@color/fui_transparent"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/txtSalem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_bold"
+        android:text="Сәлем"
+        android:textColor="@color/grey_900"
+        android:textSize="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/btnBackLoginFragment"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackLoginFragment" />
+
+    <TextView
+        android:id="@+id/txtAccLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_regular"
+        android:text="Аккаунтқа кіріңіз"
+        android:textColor="@color/grey_500"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@+id/txtSalem"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalem"/>
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_bold"
+        android:text="Email"
+        android:textColor="@color/grey_900"
+        android:textSize="14dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="@+id/txtAccLogin"
+        app:layout_constraintTop_toBottomOf="@+id/txtAccLogin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_message"
+            android:hint="Сіздің email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingVertical="16dp"
+            android:textColorHint="@color/grey_400"
+            />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
