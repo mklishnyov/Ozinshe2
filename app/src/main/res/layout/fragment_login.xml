@@ -199,7 +199,5 @@
                 android:text=" Тіркелу"
                 android:textColor="@color/primary_300"/>
         </LinearLayout>
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
