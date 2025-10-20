@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.ozinshe20.presentation.LoginFragment"
+        android:name="com.example.ozinshe20.presentation.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>

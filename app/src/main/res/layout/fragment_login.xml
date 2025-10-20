@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.LoginFragment">
+    tools:context=".presentation.login.LoginFragment">
 
     <ImageButton
         android:id="@+id/btnBackLoginFragment"
@@ -82,6 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="15dp"
+            android:visibility="gone"
             android:fontFamily="@font/sf_regular"
             android:text="Қате формат"
             android:textColor="@color/red"
@@ -154,6 +155,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="15dp"
             android:visibility="gone"
+            android:layout_gravity="center"
             android:fontFamily="@font/sf_regular"
             android:text="Мұндай email-ы бар пайдаланушы тіркелген"
             android:textColor="@color/red"
