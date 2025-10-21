@@ -1,4 +1,4 @@
-package com.example.ozinshe20.presentation.login
+package com.example.ozinshe20.presentation.register
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,25 +7,25 @@ import androidx.lifecycle.viewModelScope
 import com.example.ozinshe20.data.ApiService
 import com.example.ozinshe20.data.ServiceBuilder
 import com.example.ozinshe20.data.model.LoginAndRegisterRequest
-import com.example.ozinshe20.data.model.LoginResponse
+import com.example.ozinshe20.data.model.RegisterResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class LoginViewModel(): ViewModel() {
+class RegisterViewModel(): ViewModel() {
 
-    private var _loginResponse: MutableLiveData<LoginResponse> = MutableLiveData()
-    val loginResponse: LiveData<LoginResponse> = _loginResponse
+    private var _registerResponse: MutableLiveData<RegisterResponse> = MutableLiveData()
+    val registerResponse: LiveData<RegisterResponse> = _registerResponse
 
     private var _errorResponse: MutableLiveData<String> = MutableLiveData()
     val errorResponse: LiveData<String> = _errorResponse
 
-    fun loginUser(email: String, password: String) {
+    fun registerUser(email: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val response = ServiceBuilder.buildService(ApiService::class.java)
 
-            runCatching { response.loginUser(LoginAndRegisterRequest(email, password)) }
+            runCatching { response.registerUser(LoginAndRegisterRequest(email, password)) }
                 .onSuccess {
-                    _loginResponse.postValue(it)
+                    _registerResponse.postValue(it)
                 }
                 .onFailure {
                     _errorResponse.postValue(it.message)
