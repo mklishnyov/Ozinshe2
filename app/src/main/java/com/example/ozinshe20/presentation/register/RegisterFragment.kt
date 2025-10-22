@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.ozinshe20.R
 import com.example.ozinshe20.databinding.FragmentRegisterBinding
+import com.example.ozinshe20.provideNavigationHost
 
 class RegisterFragment : Fragment() {
 
@@ -31,6 +32,11 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        provideNavigationHost()?.apply {
+            setNavigationVisibility(false)
+        }
+
 
         viewModel.registerResponse.observe(viewLifecycleOwner) {
             binding.tvErrorTextPasswordAndServer.visibility = View.GONE

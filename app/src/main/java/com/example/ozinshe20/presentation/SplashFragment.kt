@@ -20,8 +20,21 @@ class SplashFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 
+    override fun onStart() {
+        super.onStart()
+        provideNavigationHost()?.apply {
+            setNavigationVisibility(false)
+        }
+
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        provideNavigationHost()?.apply {
+            setNavigationVisibility(false)
+        }
+
         lifecycleScope.launch {
             delay(3000)
             findNavController().navigate(R.id.action_splashFragment_to_onboardingFragment)

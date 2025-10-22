@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.ozinshe20.R
 import com.example.ozinshe20.data.OnboardingInfoList
 import com.example.ozinshe20.databinding.FragmentOnboardingBinding
+import com.example.ozinshe20.provideNavigationHost
 
 class OnboardingFragment : Fragment() {
 
@@ -28,6 +29,11 @@ class OnboardingFragment : Fragment() {
         val adapter = OnboardingAdapter()
         adapter.submitList(OnboardingInfoList.onboardingModelList)
         binding.viewPager2OnboardingFragment.adapter = adapter
+
+        provideNavigationHost()?.apply {
+            setNavigationVisibility(false)
+        }
+
 
         val viewPagerCallBack = object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
