@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.ozinshe20.R
+import com.example.ozinshe20.data.SharedProvider
 import com.example.ozinshe20.databinding.FragmentLoginBinding
 import com.example.ozinshe20.provideNavigationHost
 
@@ -33,15 +34,13 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        provideNavigationHost()?.apply {
-            setNavigationVisibility(false)
-        }
+        provideNavigationHost()?.setNavigationVisibility(false)
 
 
         viewModel.loginResponse.observe(viewLifecycleOwner) {
             binding.tvErrorTextPasswordAndServer.visibility = View.GONE
             Toast.makeText(requireContext(), "$it", Toast.LENGTH_SHORT).show()
-            it.accessToken
+            SharedProvider(requireContext()).saveToken(it.accessToken)
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
         }
 
@@ -64,6 +63,7 @@ class LoginFragment : Fragment() {
                 viewModel.loginUser(email, password)
             } else {
                 validationEmail(isValidEmail)
+                validationPassword(password)
             }
         }
 
