@@ -72,5 +72,4 @@ class MainMovieAdapter: RecyclerView.Adapter<MainMovieAdapter.MainMovieHolder>()
     }
 
     override fun getItemCount(): Int = differ.currentList.size
-
 }
