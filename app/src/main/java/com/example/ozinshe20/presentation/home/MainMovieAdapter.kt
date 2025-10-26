@@ -55,7 +55,6 @@ class MainMovieAdapter: RecyclerView.Adapter<MainMovieAdapter.MainMovieHolder>()
             itemView.setOnClickListener {
                 listenerClickAtItem?.onClick(mainMovieItem.id)
             }
-
         }
     }
 
