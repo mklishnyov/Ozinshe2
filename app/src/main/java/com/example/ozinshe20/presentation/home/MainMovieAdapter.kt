@@ -42,6 +42,7 @@ class MainMovieAdapter: RecyclerView.Adapter<MainMovieAdapter.MainMovieHolder>()
     }
 
     inner class MainMovieHolder(private var binding: ItemMainMoviesBinding): RecyclerView.ViewHolder(binding.root){
+
         fun bindItem(mainMovieItem: MainMoviesResponseItem){
             val fixedLink = mainMovieItem.link.replace("http://api.ozinshe.com", "http://apiozinshe.mobydev.kz")
 
