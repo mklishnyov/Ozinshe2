@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.example.ozinshe20.data.model.MainMoviesResponseItem
@@ -48,7 +49,7 @@ class MainMovieAdapter: RecyclerView.Adapter<MainMovieAdapter.MainMovieHolder>()
 
             Glide.with(itemView.context)
                 .load(fixedLink)
-                .apply(RequestOptions().transform(RoundedCorners(12)))
+                .transform(CenterCrop(), RoundedCorners(24))
                 .into(binding.imgMainMovie)
 
             binding.tvTextTitle.text = mainMovieItem.movie.name
