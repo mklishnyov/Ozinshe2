@@ -53,7 +53,7 @@ class MoviesByCategoryMainAdapter: RecyclerView.Adapter<MoviesByCategoryMainAdap
                 .into(binding.imgCategoryMovie)
 
             binding.tvTitleMovie.text = MovieItem.name
-            binding.tvCategoryMovie.text = MovieItem.movieType
+            binding.tvCategoryMovie.text = MovieItem.categories[0].name
             itemView.setOnClickListener {
                 listenerClickAtItem?.onClick(MovieItem.id)
             }

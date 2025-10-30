@@ -44,5 +44,14 @@ class HomeFragment : Fragment() {
         viewModel.mainMoviesResponse.observe(viewLifecycleOwner) {
             adapterMainMovies.submitList(it)
         }
+
+        viewModel.getMoviesByCategoryMain(token)
+
+        val adapterMoviesByCategory = MoviesByCategoryMainAdapter()
+        viewModel.moviesByCategoryMainModel.observe(viewLifecycleOwner) {
+            binding.rcMoviesCategory.adapter = adapterMoviesByCategory
+            binding.categoryName.text = it.categoryName
+            adapterMoviesByCategory.submitList(it.movies)
+        }
     }
 }
