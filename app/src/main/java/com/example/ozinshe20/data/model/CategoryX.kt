@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName
 
 data class CategoryX(
     @SerializedName("fileId")
-    val fileId: Int,
+    val fileId: Any,
     @SerializedName("id")
     val id: Int,
     @SerializedName("link")
-    val link: String,
+    val link: Any,
     @SerializedName("movieCount")
     val movieCount: Int,
     @SerializedName("name")

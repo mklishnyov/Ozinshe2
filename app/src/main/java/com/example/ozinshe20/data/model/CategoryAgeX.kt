@@ -11,7 +11,7 @@ data class CategoryAgeX(
     @SerializedName("link")
     val link: String,
     @SerializedName("movieCount")
-    val movieCount: Int,
+    val movieCount: Any,
     @SerializedName("name")
     val name: String
 )

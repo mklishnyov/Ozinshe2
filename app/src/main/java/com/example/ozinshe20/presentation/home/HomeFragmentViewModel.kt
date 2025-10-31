@@ -12,9 +12,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class HomeFragmentViewModel: ViewModel() {
+    private val apiService = ServiceBuilder.buildService(ApiService::class.java)
+
     private var _mainMoviesResponse: MutableLiveData<MainMoviesResponse> = MutableLiveData()
     val mainMoviesResponse: LiveData<MainMoviesResponse> = _mainMoviesResponse
-
     private var _moviesByCategoryMainModel: MutableLiveData<MoviesByCategoryMainModel> = MutableLiveData()
     val moviesByCategoryMainModel: LiveData<MoviesByCategoryMainModel> = _moviesByCategoryMainModel
 
@@ -23,9 +24,7 @@ class HomeFragmentViewModel: ViewModel() {
 
     fun getMainMovies(token: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val response = ServiceBuilder.buildService(ApiService::class.java)
-
-            runCatching { response.getMainMovies("Bearer $token") }
+            runCatching { apiService.getMainMovies("Bearer $token") }
                 .onSuccess {
                     _mainMoviesResponse.postValue(it)
                 }
@@ -37,9 +36,7 @@ class HomeFragmentViewModel: ViewModel() {
 
     fun getMoviesByCategoryMain(token: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val response = ServiceBuilder.buildService(ApiService::class.java)
-
-            runCatching { response.getMoviesByCategoryMain("Bearer $token") }
+            runCatching { apiService.getMoviesByCategoryMain("Bearer $token") }
                 .onSuccess {
                     _moviesByCategoryMainModel.postValue(it)
                 }

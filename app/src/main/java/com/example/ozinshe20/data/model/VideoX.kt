@@ -11,5 +11,5 @@ data class VideoX(
     @SerializedName("number")
     val number: Int,
     @SerializedName("seasonId")
-    val seasonId: Int
+    val seasonId: Any
 )

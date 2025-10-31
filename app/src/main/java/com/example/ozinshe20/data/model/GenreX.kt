@@ -11,7 +11,7 @@ data class GenreX(
     @SerializedName("link")
     val link: String,
     @SerializedName("movieCount")
-    val movieCount: Int,
+    val movieCount: Any,
     @SerializedName("name")
     val name: String
 )

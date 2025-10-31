@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.ozinshe20.data.model.MainMoviesResponseItem
 import com.example.ozinshe20.data.model.Movy
 import com.example.ozinshe20.databinding.ItemCategoryMainBinding
 
@@ -43,34 +42,36 @@ class MoviesByCategoryMainAdapter: RecyclerView.Adapter<MoviesByCategoryMainAdap
     }
 
     inner class MoviesByCategoryMainHolder(private var binding: ItemCategoryMainBinding): RecyclerView.ViewHolder(binding.root){
+        fun bindItem(movieItem: Movy){
 
-        fun bindItem(MovieItem: Movy){
-            val fixedLink = MovieItem.poster.link.replace("http://api.ozinshe.com", "http://apiozinshe.mobydev.kz")
+            val fixedLink = movieItem.poster.link.replace("http://api.ozinshe.com", "http://apiozinshe.mobydev.kz")
 
             Glide.with(itemView.context)
                 .load(fixedLink)
                 .transform(CenterCrop(), RoundedCorners(24))
                 .into(binding.imgCategoryMovie)
 
-            binding.tvTitleMovie.text = MovieItem.name
-            binding.tvCategoryMovie.text = MovieItem.categories[0].name
+            binding.tvTitleMovie.text = movieItem.name
+            binding.tvCategoryMovie.text = movieItem.categories[0].name
             itemView.setOnClickListener {
-                listenerClickAtItem?.onClick(MovieItem.id)
+                listenerClickAtItem?.onClick(movieItem.id)
             }
         }
     }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): MoviesByCategoryMainHolder {
-        return MoviesByCategoryMainHolder(ItemCategoryMainBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-    }
-
-    override fun onBindViewHolder(holder: MoviesByCategoryMainHolder, position: Int) {
-        val item = differ.currentList[position]
-        holder.bindItem(item)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesByCategoryMainHolder {
+        return MoviesByCategoryMainHolder(
+            ItemCategoryMainBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int = differ.currentList.size
+
+    override fun onBindViewHolder(holder: MoviesByCategoryMainHolder, position: Int) {
+        holder.bindItem(differ.currentList[position])
+    }
 }
