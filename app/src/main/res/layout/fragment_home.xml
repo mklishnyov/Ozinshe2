@@ -63,8 +63,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/sf_semibold"
                 android:textColor="@color/primary_300"
-                android:gravity="end"
-                android:layout_marginEnd="24dp"/>
+                android:gravity="end"/>
 
         </LinearLayout>
 
@@ -77,6 +76,100 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/categoryTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/categoryTitle1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcMoviesCategory">
+
+            <TextView
+                android:id="@+id/categoryName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_bold"
+                android:textColor="@color/grey_900"/>
+
+            <TextView
+                android:id="@+id/categoryEtc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Барлығы"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_semibold"
+                android:textColor="@color/primary_300"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcMoviesCategory1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTitle1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/categoryTitle2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcMoviesCategory1">
+
+            <TextView
+                android:id="@+id/categoryName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_bold"
+                android:textColor="@color/grey_900"/>
+
+            <TextView
+                android:id="@+id/categoryEtc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Барлығы"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_semibold"
+                android:textColor="@color/primary_300"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcMoviesCategory2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTitle2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

@@ -46,6 +46,14 @@ class HomeFragment : Fragment() {
             binding.rcMoviesCategory.adapter = adapterMoviesByCategory
             binding.categoryName.text = it[0].categoryName
             adapterMoviesByCategory.submitList(it[0].movies)
+
+            binding.rcMoviesCategory1.adapter = adapterMoviesByCategory
+            binding.categoryName1.text = it[1].categoryName
+            adapterMoviesByCategory.submitList(it[1].movies)
+
+            binding.rcMoviesCategory2.adapter = adapterMoviesByCategory
+            binding.categoryName2.text = it[2].categoryName
+            adapterMoviesByCategory.submitList(it[2].movies)
         }
     }
 }
