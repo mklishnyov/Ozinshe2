@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.about.AboutFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="340dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_image_onboarding_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_shadow_about"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btnBackAboutFragment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="31dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btnPlayAboutFragment"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="222dp"
+        android:background="@drawable/ic_play_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btnFavouriteAboutFragment"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_bookmark"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlayAboutFragment"
+        app:layout_constraintEnd_toStartOf="@id/btnPlayAboutFragment"
+        app:layout_constraintTop_toTopOf="@+id/btnPlayAboutFragment"/>
+
+    <ImageButton
+        android:id="@+id/btnShareAboutFragment"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_share"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlayAboutFragment"
+        app:layout_constraintStart_toEndOf="@id/btnPlayAboutFragment"
+        app:layout_constraintTop_toTopOf="@+id/btnPlayAboutFragment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_semibold"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:text="Тізімге қосу"
+        android:textColor="@color/grey_400"
+        app:layout_constraintEnd_toEndOf="@+id/btnFavouriteAboutFragment"
+        app:layout_constraintStart_toStartOf="@+id/btnFavouriteAboutFragment"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavouriteAboutFragment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_semibold"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:text="Бөлісу"
+        android:textColor="@color/grey_400"
+        app:layout_constraintEnd_toEndOf="@+id/btnShareAboutFragment"
+        app:layout_constraintStart_toStartOf="@+id/btnShareAboutFragment"
+        app:layout_constraintTop_toBottomOf="@+id/btnShareAboutFragment" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="1358dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/background_about_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPlayAboutFragment">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

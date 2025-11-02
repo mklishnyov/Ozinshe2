@@ -80,4 +80,7 @@ dependencies {
     // Gson (To convert raw JSON to pretty JSON)
     implementation ("com.google.code.gson:gson:2.9.1")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Textview
+    implementation ("com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0")
 }
