@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ozinshe20.data.SharedProvider
 import com.example.ozinshe20.databinding.FragmentHomeBinding
@@ -36,6 +37,13 @@ class HomeFragment : Fragment() {
 
         val adapterMainMovies = MainMovieAdapter()
         binding.rcMainMovies.adapter = adapterMainMovies
+        adapterMainMovies.setOnClickMovieListener(object :RcViewItemClickMainMoviesCallback{
+            override fun onClick(movieId: Int) {
+                val action = HomeFragmentDirections.actionHomeFragmentToAboutFragment(movieId)
+                findNavController().navigate(action)
+            }
+        })
+
         viewModel.mainMoviesResponse.observe(viewLifecycleOwner) {
             adapterMainMovies.submitList(it)
         }
