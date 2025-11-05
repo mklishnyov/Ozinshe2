@@ -1,6 +1,6 @@
 package com.example.ozinshe20.presentation.home
 
-class RcViewItemClickMainMoviesCallback {
+interface RcViewItemClickMainMoviesCallback {
     fun onClick(movieId: Int) {
 
     }

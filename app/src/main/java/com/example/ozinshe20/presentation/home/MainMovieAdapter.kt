@@ -45,7 +45,7 @@ class MainMovieAdapter: RecyclerView.Adapter<MainMovieAdapter.MainMovieHolder>()
     inner class MainMovieHolder(private var binding: ItemMainMoviesBinding): RecyclerView.ViewHolder(binding.root){
 
         fun bindItem(mainMovieItem: MainMoviesResponseItem){
-            val fixedLink = mainMovieItem.link.replace("http://api.ozinshe.com", "http://apiozinshe.mobydev.kz")
+            val fixedLink = mainMovieItem.link.replaceFirst("http://api.ozinshe.com", "http://apiozinshe.mobydev.kz")
 
             Glide.with(itemView.context)
                 .load(fixedLink)
@@ -55,7 +55,7 @@ class MainMovieAdapter: RecyclerView.Adapter<MainMovieAdapter.MainMovieHolder>()
             binding.tvTextTitle.text = mainMovieItem.movie.name
             binding.tvTextDescription.text = mainMovieItem.movie.description
             itemView.setOnClickListener {
-                listenerClickAtItem?.onClick(mainMovieItem.id)
+                listenerClickAtItem?.onClick(mainMovieItem.movie.id)
             }
         }
     }

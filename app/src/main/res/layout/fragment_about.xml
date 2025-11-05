@@ -11,6 +11,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/tvPoster"
         android:layout_width="0dp"
         android:layout_height="340dp"
         android:scaleType="centerCrop"

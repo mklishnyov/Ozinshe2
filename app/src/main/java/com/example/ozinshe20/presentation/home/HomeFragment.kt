@@ -4,10 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.ozinshe20.data.SharedProvider
 import com.example.ozinshe20.databinding.FragmentHomeBinding
 import com.example.ozinshe20.provideNavigationHost
@@ -49,19 +50,19 @@ class HomeFragment : Fragment() {
         }
 
         viewModel.getMoviesByCategoryMain(token)
-        val adapterMoviesByCategory = MoviesByCategoryMainAdapter()
-        viewModel.moviesByCategoryMainModel.observe(viewLifecycleOwner) {
-            binding.rcMoviesCategory.adapter = adapterMoviesByCategory
-            binding.categoryName.text = it[0].categoryName
-            adapterMoviesByCategory.submitList(it[0].movies)
 
-            binding.rcMoviesCategory1.adapter = adapterMoviesByCategory
-            binding.categoryName1.text = it[1].categoryName
-            adapterMoviesByCategory.submitList(it[1].movies)
+        viewModel.moviesByCategoryMainModel.observe(viewLifecycleOwner) { categories ->
+            fun adapterMovies(position: Int, recyclerView: RecyclerView, categoryNameView: TextView) {
+                val adapterMoviesByCategory = MoviesByCategoryMainAdapter()
+                recyclerView.adapter = adapterMoviesByCategory
+                categoryNameView.text = categories[position].categoryName
+                adapterMoviesByCategory.submitList(categories[position].movies)
+            }
 
-            binding.rcMoviesCategory2.adapter = adapterMoviesByCategory
-            binding.categoryName2.text = it[2].categoryName
-            adapterMoviesByCategory.submitList(it[2].movies)
+            adapterMovies(0, binding.rcMoviesCategory, binding.categoryName)
+            adapterMovies(1, binding.rcMoviesCategory1, binding.categoryName1)
+            adapterMovies(2, binding.rcMoviesCategory2, binding.categoryName2)
         }
+
     }
 }
