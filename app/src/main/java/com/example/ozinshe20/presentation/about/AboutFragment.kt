@@ -40,12 +40,57 @@ class AboutFragment : Fragment() {
             Glide.with(requireContext())
                 .load(fixedLink)
                 .into(binding.tvPoster)
-            binding.textTitleMovie.text = it.name
-            binding.textTvDescription.text = it.description
-            binding.textTvAdditionalInfoYear.text = it.year.toString()
-            binding.textTvProducer.text = it.producer
-            binding.textTvDirector.text = it.director
+            binding.run {
+                btnBackAboutFragment.setOnClickListener {
+                    requireActivity().onBackPressed()
+                }
+                textTitleMovie.text = it.name
+                textTvDescription.text = it.description
+                textTvAdditionalInfoYear.text = it.year.toString()
+                textTvProducer.text = it.producer
+                textTvDirector.text = it.director
 
+                var additionalInfo = " "
+                for (i in it.genres) {
+                    additionalInfo += "· ${i.name} "
+                }
+                textTvGenres.text = additionalInfo
+
+                textTvDescription.post {
+                    if (textTvDescription.lineCount <= 1) {
+                        btnMoreDescription.visibility = View.GONE
+                        fadingEdgeLayoutDescription.setFadeSizes(0, 0, 0, 0)
+                    } else {
+                        btnMoreDescription.visibility = View.VISIBLE
+                        btnMoreDescription.setOnClickListener {
+                            if (textTvDescription.maxLines == 100) {
+                                textTvDescription.maxLines = 7
+                                btnMoreDescription.text = "Толығырақ"
+                                fadingEdgeLayoutDescription.setFadeSizes(0, 0, 120, 0)
+                            } else {
+                                textTvDescription.maxLines = 100
+                                btnMoreDescription.text = "Жасыру"
+                                fadingEdgeLayoutDescription.setFadeSizes(0, 0, 0, 0)
+                            }
+                        }
+                    }
+                }
+
+
+                if (it.video == null) {
+                    textTvBolimder.text = "${it.seasonCount} сезон, ${it.seriesCount} серия"
+                    textBolimder.setOnClickListener {
+                        // Navigation to Bolimber Fragment
+                    }
+                    btnNextAllMovie.setOnClickListener {
+                        // Navigation to Bolimder Fragment
+                    }
+                } else {
+                    textTvBolimder.visibility = View.GONE
+                    textBolimder.visibility = View.GONE
+                    btnNextAllMovie.visibility = View.GONE
+                }
+            }
         }
     }
 }

@@ -57,12 +57,18 @@ class HomeFragment : Fragment() {
                 recyclerView.adapter = adapterMoviesByCategory
                 categoryNameView.text = categories[position].categoryName
                 adapterMoviesByCategory.submitList(categories[position].movies)
+
+                adapterMoviesByCategory.setOnClickMovieListener(object : RcViewItemClickMainMoviesCallback {
+                    override fun onClick(movieId: Int) {
+                        val action = HomeFragmentDirections.actionHomeFragmentToAboutFragment(movieId)
+                        findNavController().navigate(action)
+                    }
+                })
             }
 
             adapterMovies(0, binding.rcMoviesCategory, binding.categoryName)
             adapterMovies(1, binding.rcMoviesCategory1, binding.categoryName1)
             adapterMovies(2, binding.rcMoviesCategory2, binding.categoryName2)
         }
-
     }
 }
