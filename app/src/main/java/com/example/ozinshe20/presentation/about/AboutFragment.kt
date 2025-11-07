@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.ozinshe20.R
@@ -32,10 +33,25 @@ class AboutFragment : Fragment() {
         provideNavigationHost()?.apply {
             setNavigationVisibility(false)
         }
+
+        binding.btnBackAboutFragment.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         val token = SharedProvider(requireContext()).getToken()
         viewModel.getMoviesById(token, args.movieId)
 
         viewModel.moviesByIDResponse.observe(viewLifecycleOwner) {
+            val adapterScreenshot = ImageAdapter()
+            adapterScreenshot.submitList(it.screenshots)
+            binding.rcViewScreenshots.adapter = adapterScreenshot
+            adapterScreenshot.setOnClickImageListener(object : RcViewItemClickImageCallback {
+                override fun onClick(link: String) {
+                    val action = AboutFragmentDirections.actionAboutFragmentToImageFragment(link)
+                    findNavController().navigate(action)
+                }
+            })
+
             val fixedLink = it.poster.link.replaceFirst("http://api.ozinshe.com", "http://apiozinshe.mobydev.kz")
             Glide.with(requireContext())
                 .load(fixedLink)
