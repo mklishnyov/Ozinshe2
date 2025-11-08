@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.ozinshe20.R
 import com.example.ozinshe20.databinding.FragmentImageBinding
 import com.example.ozinshe20.databinding.ItemImageBinding
+import com.example.ozinshe20.provideNavigationHost
 
 class ImageFragment : Fragment() {
 
@@ -28,6 +29,9 @@ class ImageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        provideNavigationHost()?.setNavigationVisibility(false)
+
         Glide.with(requireContext()).load(args.imageLink).into(binding.imageView)
 
         val onBackPressedCallback = object : OnBackPressedCallback(true) {

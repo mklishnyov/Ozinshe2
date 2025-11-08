@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("androidx.navigation.safeargs.kotlin")
+    alias(libs.plugins.navigationSafeArgs)
 }
 
 android {
@@ -86,4 +86,6 @@ dependencies {
     implementation ("com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0")
 
     implementation ("com.github.chrisbanes:PhotoView:2.3.0")
+
+    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0")
 }

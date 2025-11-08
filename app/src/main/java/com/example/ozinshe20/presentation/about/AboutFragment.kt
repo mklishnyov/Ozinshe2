@@ -42,6 +42,14 @@ class AboutFragment : Fragment() {
         viewModel.getMoviesById(token, args.movieId)
 
         viewModel.moviesByIDResponse.observe(viewLifecycleOwner) {
+            binding.btnPlayAboutFragment.setOnClickListener { click ->
+                if (it.video != null) {
+                    val action = AboutFragmentDirections.actionAboutFragmentToVideoFragment(it.video?.link?: "")
+                    findNavController().navigate(action)
+                } else {
+                    findNavController().navigate(R.id.seriesFragment)
+                }
+            }
             val adapterScreenshot = ImageAdapter()
             adapterScreenshot.submitList(it.screenshots)
             binding.rcViewScreenshots.adapter = adapterScreenshot

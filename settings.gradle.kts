@@ -1,6 +1,13 @@
 pluginManagement {
     repositories {
-        google {}
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        maven ("https://jitpack.io" )
         mavenCentral()
         gradlePluginPortal()
     }
@@ -10,9 +17,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://jitpack.io")
+        maven ("https://jitpack.io" )
     }
 }
-
 rootProject.name = "Ozinshe 2.0"
 include(":app")
