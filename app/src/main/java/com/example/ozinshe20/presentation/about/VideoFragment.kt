@@ -77,6 +77,7 @@ class VideoFragment : Fragment() {
                 youTubePlayer.loadOrCueVideo(lifecycle, link, 0f)
             }
         }
+
         val options: IFramePlayerOptions = IFramePlayerOptions.Builder()
             .controls(0)
             .build()
