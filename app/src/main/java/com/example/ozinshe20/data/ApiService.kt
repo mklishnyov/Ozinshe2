@@ -7,6 +7,7 @@ import com.example.ozinshe20.data.model.MainMoviesResponseItem
 import com.example.ozinshe20.data.model.MovieByIdResponse
 import com.example.ozinshe20.data.model.MoviesByCategoryMainModel
 import com.example.ozinshe20.data.model.RegisterResponse
+import com.example.ozinshe20.data.model.VideoResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -31,4 +32,10 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Path("id") id: Int
         ): MovieByIdResponse
+
+    @GET("core/V1/seasons/{id}")
+    suspend fun getSeriesById(
+        @Header("Authorization") token: String,
+        @Path("id") id: Int
+    ): List<VideoResponse>
 }
