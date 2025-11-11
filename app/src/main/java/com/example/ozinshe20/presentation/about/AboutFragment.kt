@@ -47,8 +47,17 @@ class AboutFragment : Fragment() {
                     val action = AboutFragmentDirections.actionAboutFragmentToVideoFragment(it.video?.link?: "")
                     findNavController().navigate(action)
                 } else {
-                    findNavController().navigate(R.id.seriesFragment)
+                    val action = AboutFragmentDirections.actionAboutFragmentToSeriesFragment(it.id)
+                    findNavController().navigate(action)
                 }
+            }
+            binding.textBolimder.setOnClickListener {
+                val action = AboutFragmentDirections.actionAboutFragmentToSeriesFragment(it.id)
+                findNavController().navigate(action)
+            }
+            binding.btnNextAllMovie.setOnClickListener {
+                val action = AboutFragmentDirections.actionAboutFragmentToSeriesFragment(it.id)
+                findNavController().navigate(action)
             }
             val adapterScreenshot = ImageAdapter()
             adapterScreenshot.submitList(it.screenshots)

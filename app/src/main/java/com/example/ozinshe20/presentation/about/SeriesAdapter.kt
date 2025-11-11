@@ -8,24 +8,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.ozinshe20.data.model.ScreenshotXX
-import com.example.ozinshe20.data.model.VideoResponse
-import com.example.ozinshe20.databinding.ItemImageBinding
+import com.example.ozinshe20.data.model.VideoXXX
 import com.example.ozinshe20.databinding.ItemSeriesBinding
 
 class SeriesAdapter: RecyclerView.Adapter<SeriesAdapter.SeriesHolder>() {
 
-    private val diffCallback = object : DiffUtil.ItemCallback<VideoResponse>() {
+    private val diffCallback = object : DiffUtil.ItemCallback<VideoXXX>() {
         override fun areItemsTheSame(
-            oldItem: VideoResponse,
-            newItem: VideoResponse
+            oldItem: VideoXXX,
+            newItem: VideoXXX
         ): Boolean {
             return oldItem == newItem
         }
 
         override fun areContentsTheSame(
-            oldItem: VideoResponse,
-            newItem: VideoResponse
+            oldItem: VideoXXX,
+            newItem: VideoXXX
         ): Boolean {
             return oldItem == newItem
         }
@@ -34,7 +32,7 @@ class SeriesAdapter: RecyclerView.Adapter<SeriesAdapter.SeriesHolder>() {
 
     private val differ = AsyncListDiffer(this, diffCallback)
 
-    fun submitList(list: List<VideoResponse>) = differ.submitList(list)
+    fun submitList(list: List<VideoXXX>) = differ.submitList(list)
 
     private var listenerClickAtItem: RcViewItemClickVideoCallback? = null
 
@@ -45,14 +43,15 @@ class SeriesAdapter: RecyclerView.Adapter<SeriesAdapter.SeriesHolder>() {
     inner class SeriesHolder(private var binding: ItemSeriesBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bindItem(video: VideoResponse) {
+        fun bindItem(video: VideoXXX) {
             binding.apply {
                 Glide.with(itemView)
-                    .load("http://img.youtube.com/vi/${video.videos[0].link}/maxresdefault.jpg")
+                    .load("http://img.youtube.com/vi/${video.link}/maxresdefault.jpg")
+                    .transform(CenterCrop(), RoundedCorners(40))
                     .into(binding.imgTvSeries)
                 textSeries.text = "${video.number}-ші бөлім"
                 root.setOnClickListener {
-                    listenerClickAtItem?.onVideoItemClick(video.videos[0].link)
+                    listenerClickAtItem?.onVideoItemClick(video.link)
                 }
             }
         }

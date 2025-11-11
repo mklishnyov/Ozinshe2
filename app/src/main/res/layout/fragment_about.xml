@@ -97,10 +97,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="1358dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/background_about_fragment"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnPlayAboutFragment">
 
         <TextView
@@ -113,8 +114,8 @@
             android:text="Дала"
             android:textColor="@color/grey_900"
             android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textTvAdditionalInfoYear"
@@ -125,20 +126,20 @@
             android:text="2018"
             android:textColor="@color/grey_400"
             android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@+id/textTitleMovie"
-            app:layout_constraintStart_toStartOf="@+id/textTitleMovie"/>
+            app:layout_constraintStart_toStartOf="@+id/textTitleMovie"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleMovie" />
 
         <View
             android:id="@+id/view"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_marginTop="24dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
             android:background="@color/grey_200"
-            app:layout_constraintTop_toBottomOf="@+id/textTitleMovie"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/textTitleMovie" />
 
         <com.bosphere.fadingedgelayout.FadingEdgeLayout
             android:id="@+id/fadingEdgeLayoutDescription"
@@ -158,7 +159,7 @@
                 android:fontFamily="@font/sf_medium"
                 android:maxLines="7"
                 android:text="  "
-                android:textColor="@color/grey_400"/>
+                android:textColor="@color/grey_400" />
         </com.bosphere.fadingedgelayout.FadingEdgeLayout>
 
         <TextView
@@ -170,7 +171,7 @@
             android:text="Толығырақ"
             android:textColor="@color/primary_300"
             app:layout_constraintStart_toStartOf="@+id/fadingEdgeLayoutDescription"
-            app:layout_constraintTop_toBottomOf="@+id/fadingEdgeLayoutDescription"/>
+            app:layout_constraintTop_toBottomOf="@+id/fadingEdgeLayoutDescription" />
 
         <TextView
             android:id="@+id/textDirector"
@@ -181,7 +182,7 @@
             android:text="Режисер:"
             android:textColor="@color/grey_600"
             app:layout_constraintStart_toStartOf="@+id/btnMoreDescription"
-            app:layout_constraintTop_toBottomOf="@+id/fadingEdgeLayoutDescription"/>
+            app:layout_constraintTop_toBottomOf="@+id/fadingEdgeLayoutDescription" />
 
         <TextView
             android:id="@+id/textProducer"
@@ -192,7 +193,7 @@
             android:text="Продюсер:"
             android:textColor="@color/grey_600"
             app:layout_constraintStart_toStartOf="@+id/textDirector"
-            app:layout_constraintTop_toBottomOf="@+id/textDirector"/>
+            app:layout_constraintTop_toBottomOf="@+id/textDirector" />
 
         <TextView
             android:id="@+id/textTvDirector"
@@ -203,7 +204,7 @@
             android:text=""
             android:textColor="@color/grey_400"
             app:layout_constraintStart_toEndOf="@+id/textDirector"
-            app:layout_constraintTop_toTopOf="@+id/textDirector"/>
+            app:layout_constraintTop_toTopOf="@+id/textDirector" />
 
         <TextView
             android:id="@+id/textTvProducer"
@@ -213,7 +214,7 @@
             android:text=""
             android:textColor="@color/grey_400"
             app:layout_constraintStart_toStartOf="@+id/textTvDirector"
-            app:layout_constraintTop_toTopOf="@+id/textProducer"/>
+            app:layout_constraintTop_toTopOf="@+id/textProducer" />
 
         <View
             android:id="@+id/view2"
@@ -225,7 +226,7 @@
             android:background="@color/grey_200"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textProducer"/>
+            app:layout_constraintTop_toBottomOf="@+id/textProducer" />
 
         <TextView
             android:id="@+id/textBolimder"
@@ -237,7 +238,7 @@
             android:textColor="@color/grey_900"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/view2"/>
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <TextView
             android:id="@+id/textTvBolimder"
@@ -249,7 +250,7 @@
             android:textColor="@color/grey_400"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/btnNextAllMovie"
-            app:layout_constraintTop_toTopOf="@+id/textBolimder"/>
+            app:layout_constraintTop_toTopOf="@+id/textBolimder" />
 
         <ImageButton
             android:id="@+id/btnNextAllMovie"
@@ -259,7 +260,7 @@
             android:src="@drawable/ic_button_next"
             app:layout_constraintBottom_toBottomOf="@+id/textBolimder"
             app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="@+id/textBolimder"/>
+            app:layout_constraintTop_toTopOf="@+id/textBolimder" />
 
         <TextView
             android:id="@+id/textScreenshots"
@@ -271,18 +272,18 @@
             android:textColor="@color/grey_900"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/view2"/>
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcViewScreenshots"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/textScreenshots"/>
+            app:layout_constraintTop_toBottomOf="@+id/textScreenshots" />
 
         <TextView
             android:id="@+id/textSimilar"
@@ -294,7 +295,7 @@
             android:textColor="@color/grey_900"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/rcViewScreenshots"/>
+            app:layout_constraintTop_toBottomOf="@+id/rcViewScreenshots" />
 
         <TextView
             android:id="@+id/btnSimilarMovieMore"
@@ -304,7 +305,7 @@
             android:text="Барлығы"
             android:textColor="@color/primary_300"
             app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="@+id/textSimilar"/>
+            app:layout_constraintTop_toTopOf="@+id/textSimilar" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcViewSimilar"
@@ -314,7 +315,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/textSimilar"/>
+            app:layout_constraintTop_toBottomOf="@+id/textSimilar" />
 
         <TextView
             android:id="@+id/textTvGenres"
@@ -324,10 +325,10 @@
             android:text="TextView"
             android:textColor="@color/grey_400"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textTvAdditionalInfoYear"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintStart_toEndOf="@+id/textTvAdditionalInfoYear"
-            app:layout_constraintTop_toTopOf="@+id/textTvAdditionalInfoYear"
-            app:layout_constraintBottom_toBottomOf="@+id/textTvAdditionalInfoYear"/>
+            app:layout_constraintTop_toTopOf="@+id/textTvAdditionalInfoYear" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
