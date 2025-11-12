@@ -1,6 +1,7 @@
 package com.example.ozinshe20.presentation.about
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.ozinshe20.R
 import com.example.ozinshe20.data.SharedProvider
+import com.example.ozinshe20.data.model.MovieIdResponse
 import com.example.ozinshe20.databinding.FragmentAboutBinding
 import com.example.ozinshe20.provideNavigationHost
 
@@ -19,6 +21,7 @@ class AboutFragment : Fragment() {
     private lateinit var binding: FragmentAboutBinding
     private val args: AboutFragmentArgs by navArgs()
     private val viewModel: AboutViewModel by viewModels()
+    private var favoriteState: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -77,6 +80,15 @@ class AboutFragment : Fragment() {
                 btnBackAboutFragment.setOnClickListener {
                     requireActivity().onBackPressed()
                 }
+
+                if (it.favorite) {
+                    favoriteState = true
+                    btnFavoriteAboutFragment.background = resources.getDrawable(R.drawable.ic_bookmark_filled, null)
+                } else {
+                    favoriteState = false
+                    btnFavoriteAboutFragment.background = resources.getDrawable(R.drawable.ic_bookmark, null)
+                }
+
                 textTitleMovie.text = it.name
                 textTvDescription.text = it.description
                 textTvAdditionalInfoYear.text = it.year.toString()
@@ -109,20 +121,37 @@ class AboutFragment : Fragment() {
                     }
                 }
 
-
                 if (it.video == null) {
                     textTvBolimder.text = "${it.seasonCount} сезон, ${it.seriesCount} серия"
                     textBolimder.setOnClickListener {
-                        // Navigation to Bolimber Fragment
+                        val action = AboutFragmentDirections.actionAboutFragmentToSeriesFragment(it.id)
+                        findNavController().navigate(action)
                     }
                     btnNextAllMovie.setOnClickListener {
-                        // Navigation to Bolimder Fragment
+                        val action = AboutFragmentDirections.actionAboutFragmentToSeriesFragment(it.id)
+                        findNavController().navigate(action)
                     }
                 } else {
                     textTvBolimder.visibility = View.GONE
                     textBolimder.visibility = View.GONE
                     btnNextAllMovie.visibility = View.GONE
                 }
+            }
+            binding.btnFavoriteAboutFragment.setOnClickListener { click ->
+                if (!favoriteState) {
+                    viewModel.addFavorite(token, MovieIdResponse(args.movieId))
+                } else {
+                    viewModel.deleteFavorite(token, MovieIdResponse(args.movieId))
+                }
+            }
+        }
+        viewModel.favoriteState.observe(viewLifecycleOwner) {
+            if (it) {
+                favoriteState = true
+                binding.btnFavoriteAboutFragment.background = resources.getDrawable(R.drawable.ic_bookmark_filled, null)
+            } else {
+                favoriteState = false
+                binding.btnFavoriteAboutFragment.background = resources.getDrawable(R.drawable.ic_bookmark, null)
             }
         }
     }

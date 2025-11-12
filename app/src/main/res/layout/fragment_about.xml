@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
-        android:id="@+id/btnFavouriteAboutFragment"
+        android:id="@+id/btnFavoriteAboutFragment"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:background="@drawable/ic_bookmark"
@@ -78,9 +78,9 @@
         android:textSize="14sp"
         android:text="Тізімге қосу"
         android:textColor="@color/grey_400"
-        app:layout_constraintEnd_toEndOf="@+id/btnFavouriteAboutFragment"
-        app:layout_constraintStart_toStartOf="@+id/btnFavouriteAboutFragment"
-        app:layout_constraintTop_toBottomOf="@+id/btnFavouriteAboutFragment" />
+        app:layout_constraintEnd_toEndOf="@+id/btnFavoriteAboutFragment"
+        app:layout_constraintStart_toStartOf="@+id/btnFavoriteAboutFragment"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavoriteAboutFragment" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="1358dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="38dp"
         android:background="@drawable/background_about_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

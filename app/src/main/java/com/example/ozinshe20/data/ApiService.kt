@@ -5,11 +5,13 @@ import com.example.ozinshe20.data.model.LoginResponse
 import com.example.ozinshe20.data.model.MainMoviesResponse
 import com.example.ozinshe20.data.model.MainMoviesResponseItem
 import com.example.ozinshe20.data.model.MovieByIdResponse
+import com.example.ozinshe20.data.model.MovieIdResponse
 import com.example.ozinshe20.data.model.MoviesByCategoryMainModel
 import com.example.ozinshe20.data.model.RegisterResponse
 import com.example.ozinshe20.data.model.VideoResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.HTTP
 import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
@@ -33,9 +35,21 @@ interface ApiService {
         @Path("id") id: Int
         ): MovieByIdResponse
 
-    @GET("core/V1/seasons/{id}")
+    @GET("/core/V1/seasons/{id}")
     suspend fun getSeriesById(
         @Header("Authorization") token: String,
         @Path("id") id: Int
     ): List<VideoResponse>
+
+    @POST("/core/V1/favorite")
+    suspend fun addFavorite(
+        @Header("Authorization") token: String,
+        @Body movieId: MovieIdResponse
+    ): MovieIdResponse
+
+    @HTTP(method = "DELETE", path = "/core/V1/favorite/", hasBody = true)
+    suspend fun deleteFavorite(
+        @Header("Authorization") token: String,
+        @Body movieId: MovieIdResponse
+    ): Unit
 }
