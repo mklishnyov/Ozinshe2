@@ -17,6 +17,7 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
+
     @POST("/auth/V1/signin")
     suspend fun loginUser(@Body loginRequest: LoginAndRegisterRequest): LoginResponse
 
