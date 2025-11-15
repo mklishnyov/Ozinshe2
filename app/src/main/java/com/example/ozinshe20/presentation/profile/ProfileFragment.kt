@@ -1,11 +1,10 @@
-package com.example.ozinshe20.presentation
+package com.example.ozinshe20.presentation.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.ozinshe20.R
 import com.example.ozinshe20.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
