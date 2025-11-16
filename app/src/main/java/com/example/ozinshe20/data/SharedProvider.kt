@@ -18,5 +18,16 @@ class SharedProvider(private val context: Context) {
         return preference.getString(shared_token, "without_token").toString()
     }
 
+    fun safeLanguage(language: String) {
+        preference.edit { putString("language", language) }
+    }
+
+    fun getLanguage(): String {
+        return preference.getString("language", "kk").toString()
+    }
+
+    fun clearShared() {
+        preference.edit { clear() }
+    }
 
 }

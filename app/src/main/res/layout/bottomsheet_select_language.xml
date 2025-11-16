@@ -31,7 +31,7 @@
             android:id="@+id/tvLanguage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Тіл"
+            android:text="@string/profile_language"
             android:textSize="24sp"
             android:fontFamily="@font/sf_bold"
             android:textColor="@color/grey_900"/>
@@ -44,7 +44,7 @@
 
             <TextView
                 android:layout_weight="@integer/material_motion_duration_medium_1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="English"
                 android:layout_gravity="center_vertical"
@@ -73,7 +73,7 @@
 
             <TextView
                 android:layout_weight="@integer/material_motion_duration_medium_1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Қазақша"
                 android:layout_gravity="center_vertical"
@@ -102,7 +102,7 @@
 
             <TextView
                 android:layout_weight="@integer/material_motion_duration_medium_1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Русский"
                 android:layout_gravity="center_vertical"

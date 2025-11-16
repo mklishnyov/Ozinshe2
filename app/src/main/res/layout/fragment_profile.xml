@@ -32,7 +32,7 @@
         android:id="@+id/profileTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Менің профилім"
+        android:text="@string/my_profile"
         android:fontFamily="@font/sf_bold"
         android:textColor="@color/grey_900"
         android:textSize="24sp"
@@ -149,13 +149,14 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Тіл"
+                android:text="@string/profile_language"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
                 android:textColor="@color/grey_800"
                 android:layout_gravity="center_vertical"/>
 
             <TextView
+                android:id="@+id/tvSelectedLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Қазақша"
