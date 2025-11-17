@@ -3,4 +3,18 @@
     <string name="app_name">Ozinshe 2.0</string>
     <string name="profile_language">Language</string>
     <string name="my_profile">My profile</string>
+    <string name="personal_data">Personal data</string>
+    <string name="edit_profile">Edit</string>
+    <string name="change_password">Change Password</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="night_mode">Nigth mode</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="share_about">Share</string>
+    <string name="read_more">Read more</string>
+    <string name="director_about">Director:</string>
+    <string name="producer_about">Producer:</string>
+    <string name="sections_about">Sections</string>
+    <string name="screenshots_about">Screenshots</string>
+    <string name="similar_tv_series">Similar TV series</string>
+    <string name="total_about">Total</string>
 </resources>

@@ -3,4 +3,18 @@
     <string name="app_name">Ozinshe 2.0</string>
     <string name="profile_language">Язык</string>
     <string name="my_profile">Мой профиль</string>
+    <string name="personal_data">Личные данные</string>
+    <string name="edit_profile">Редактировать</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="terms_and_conditions">Правила и условия</string>
+    <string name="night_mode">Темный режим</string>
+    <string name="add_to_favorites">Добавить в избранное</string>
+    <string name="share_about">Поделиться</string>
+    <string name="read_more">Подробнее</string>
+    <string name="director_about">Режисер:</string>
+    <string name="producer_about">Продюсер:</string>
+    <string name="sections_about">Разделы</string>
+    <string name="screenshots_about">Скриншоты</string>
+    <string name="similar_tv_series">Похожие сериалы</string>
+    <string name="total_about">Всего</string>
 </resources>

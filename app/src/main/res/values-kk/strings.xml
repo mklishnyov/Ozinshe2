@@ -3,4 +3,18 @@
     <string name="app_name">Ozinshe 2.0</string>
     <string name="profile_language">Тіл</string>
     <string name="my_profile">Менің профилім</string>
+    <string name="personal_data">Жеке деректер</string>
+    <string name="edit_profile">Өңдеу</string>
+    <string name="change_password">Құпия сөзді өзгерту</string>
+    <string name="terms_and_conditions">Ережелер мен шарттар</string>
+    <string name="night_mode">Қараңғы режим</string>
+    <string name="add_to_favorites">Тізімге қосу</string>
+    <string name="share_about">Бөлісу</string>
+    <string name="read_more">Толығырақ</string>
+    <string name="director_about">Режисер:</string>
+    <string name="producer_about">Продюсер:</string>
+    <string name="sections_about">Бөлімдер</string>
+    <string name="screenshots_about">Скриншоттар</string>
+    <string name="similar_tv_series">Ұқсас телехикаялар</string>
+    <string name="total_about">Барлығы</string>
 </resources>

@@ -53,7 +53,7 @@
                 android:textSize="16sp"/>
 
             <View
-                android:id="@+id/btnIconSelectEnglish"
+                android:id="@+id/ivCheckEnglish"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@drawable/ic_check"
@@ -82,7 +82,7 @@
                 android:textSize="16sp"/>
 
             <View
-                android:id="@+id/btnIconSelectKazakh"
+                android:id="@+id/ivCheckKazakh"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@drawable/ic_check"
@@ -111,7 +111,7 @@
                 android:textSize="16sp"/>
 
             <View
-                android:id="@+id/btnIconSelectRussian"
+                android:id="@+id/ivCheckRussian"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@drawable/ic_check"

@@ -33,6 +33,7 @@
         app:itemRippleColor="@color/fui_transparent"
         app:itemIconTint="@color/grey_300"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_menu"/>
+        app:menu="@menu/bottom_menu"
+        tools:ignore="VisualLintBottomNav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

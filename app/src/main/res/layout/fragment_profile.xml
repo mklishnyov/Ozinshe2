@@ -9,7 +9,8 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="44dp">
 
     <include
         android:id="@+id/toolbarProfile"
@@ -26,7 +27,8 @@
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@+id/toolbarProfile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/profileTitle"
@@ -45,7 +47,7 @@
         android:id="@+id/userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ali@gmail.com"
+        android:text=""
         android:fontFamily="@font/sf_regular"
         android:textColor="@color/grey_400"
         android:textSize="14sp"
@@ -73,9 +75,9 @@
 
             <TextView
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Жеке деректер"
+                android:text="@string/personal_data"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
                 android:textColor="@color/grey_800"
@@ -84,19 +86,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Өңдеу"
-                android:fontFamily="@font/sf_semibold"
-                android:textSize="12sp"
-                android:textColor="@color/grey_400"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sf_semibold"
+                android:text="@string/edit_profile"
+                android:textColor="@color/grey_400"
+                android:textSize="12sp"
+                tools:ignore="TextContrastCheck" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_next"
+                android:layout_gravity="center_vertical"
                 android:background="@color/fui_transparent"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/ic_button_next"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -115,9 +119,9 @@
 
             <TextView
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Құпия сөзді өзгерту"
+                android:text="@string/change_password"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
                 android:textColor="@color/grey_800"
@@ -126,9 +130,10 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_next"
+                android:layout_gravity="center_vertical"
                 android:background="@color/fui_transparent"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/ic_button_next"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -147,7 +152,7 @@
 
             <TextView
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/profile_language"
                 android:fontFamily="@font/sf_medium"
@@ -159,19 +164,21 @@
                 android:id="@+id/tvSelectedLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Қазақша"
-                android:fontFamily="@font/sf_semibold"
-                android:textSize="12sp"
-                android:textColor="@color/grey_400"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sf_semibold"
+                android:text="@string/kazakh"
+                android:textColor="@color/grey_400"
+                android:textSize="12sp"
+                tools:ignore="TextContrastCheck" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_next"
+                android:layout_gravity="center_vertical"
                 android:background="@color/fui_transparent"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/ic_button_next"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -190,9 +197,9 @@
 
             <TextView
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Ережелер мен шарттар"
+                android:text="@string/terms_and_conditions"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
                 android:textColor="@color/grey_800"
@@ -201,9 +208,10 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_next"
+                android:layout_gravity="center_vertical"
                 android:background="@color/fui_transparent"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/ic_button_next"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -222,9 +230,9 @@
 
             <TextView
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Қараңғы режим"
+                android:text="@string/night_mode"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
                 android:textColor="@color/grey_800"
@@ -232,13 +240,13 @@
 
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/switchDayNight"
-                app:thumbTint="@color/white"
-                app:trackDecorationTint="@color/grey_200"
-                app:trackTint="@color/grey_200"
                 android:layout_width="52dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
-                />
+                app:thumbTint="@color/white"
+                app:trackDecorationTint="@color/grey_200"
+                app:trackTint="@color/grey_200"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
 
