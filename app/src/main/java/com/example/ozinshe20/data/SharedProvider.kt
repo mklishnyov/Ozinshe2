@@ -26,6 +26,13 @@ class SharedProvider(private val context: Context) {
         return preference.getString("language", "kk").toString()
     }
 
+    fun saveEmail(email: String?) {
+        preference.edit { putString("email", email) }
+    }
+    fun getEmail(): String? {
+        return preference.getString("email", null)
+    }
+
     fun clearShared() {
         preference.edit { clear() }
     }

@@ -17,4 +17,23 @@
     <string name="screenshots_about">Скриншоттар</string>
     <string name="similar_tv_series">Ұқсас телехикаялар</string>
     <string name="total_about">Барлығы</string>
+    <string name="greeting_login">Сәлем</string>
+    <string name="log_in_to_your_account">Аккаунтқа кіріңіз</string>
+    <string name="your_email">Сіздің email</string>
+    <string name="wrong_format">Қате формат</string>
+    <string name="password">Құпия сөз</string>
+    <string name="your_password">Сіздің құпия сөзіңіз</string>
+    <string name="forgot_your_password">Құпия сөзді ұмыттыңыз ба?</string>
+    <string name="such_email_registered">Мұндай email-ы бар пайдаланушы тіркелген</string>
+    <string name="login">Кіру</string>
+    <string name="not_have_account">"Аккаунтыныз жоқ па? "</string>
+    <string name="registration">Тіркелу</string>
+    <string name="skip_onboarding">Өткізу</string>
+    <string name="further_onboarding">Әрі қарай</string>
+    <string name="fill_data">Деректерді толтырыңыз</string>
+    <string name="repeat_password">Құпия сөзді қайталаңыз</string>
+    <string name="you_have_account">"Сізде аккаунт бар ма? "</string>
+    <string name="season">1 сезон</string>
+    <string name="welcome_onboarding">ÖZINŞE-ге қош келдің!</string>
+    <string name="profile_toolbar">Профиль</string>
 </resources>

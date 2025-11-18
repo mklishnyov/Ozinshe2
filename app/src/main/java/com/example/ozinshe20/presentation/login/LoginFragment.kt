@@ -39,7 +39,6 @@ class LoginFragment : Fragment() {
 
         viewModel.loginResponse.observe(viewLifecycleOwner) {
             binding.tvErrorTextPasswordAndServer.visibility = View.GONE
-            Toast.makeText(requireContext(), "$it", Toast.LENGTH_SHORT).show()
             SharedProvider(requireContext()).saveToken(it.accessToken)
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
         }
@@ -61,6 +60,7 @@ class LoginFragment : Fragment() {
 
             if (isValidEmail && isValidPassword) {
                 viewModel.loginUser(email, password)
+                SharedProvider(requireContext()).saveEmail(email)
             } else {
                 validationEmail(isValidEmail)
                 validationPassword(password)

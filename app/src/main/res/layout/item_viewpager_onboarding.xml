@@ -13,7 +13,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/ic_image_onboarding_1"/>
+        tools:src="@drawable/ic_image_onboarding_1"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgShadowOnboarding"
@@ -23,7 +24,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_shadow_onboarding"/>
+        android:src="@drawable/ic_shadow_onboarding"
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +40,8 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="UselessLeaf" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -53,9 +56,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_bold"
                 android:textStyle="bold"
-                android:text="ÖZINŞE-ге қош келдің!"
+                android:text="@string/welcome_onboarding"
                 android:textColor="@color/grey_900"
-                android:textSize="24dp"
+                android:textSize="24sp"
                 android:gravity="center"
                 android:layout_marginBottom="24dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,9 +71,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_regular"
                 android:textStyle="bold"
-                android:text="Фильмдер, телехикаялар, ситкомдар, анимациялық жобалар, телебағдарламалар мен реалити-шоулар, аниме және тағы басқалары"
+                android:text=""
                 android:textColor="@color/grey_500"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +82,9 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:orientation="vertical"
+                android:layout_weight="1"
+                tools:ignore="MissingConstraints,UselessLeaf" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

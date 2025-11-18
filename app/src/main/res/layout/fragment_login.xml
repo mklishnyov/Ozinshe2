@@ -10,19 +10,20 @@
         android:id="@+id/btnBackLoginFragment"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/ic_back"
-        android:backgroundTint="@color/fui_transparent"
-        android:layout_marginTop="60dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/fui_transparent"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/txtSalem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_bold"
-        android:text="Сәлем"
+        android:text="@string/greeting_login"
         android:textColor="@color/grey_900"
         android:textSize="24sp"
         android:layout_marginTop="24dp"
@@ -34,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_regular"
-        android:text="Аккаунтқа кіріңіз"
+        android:text="@string/log_in_to_your_account"
         android:textColor="@color/grey_500"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/txtSalem"
@@ -45,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_bold"
-        android:text="Email"
+        android:text="@string/email"
         android:textColor="@color/grey_900"
         android:textSize="14sp"
         android:layout_marginTop="29dp"
@@ -66,16 +67,18 @@
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autofillHints=""
             android:background="@drawable/background_edittext_focus_action_12dp"
             android:drawableStart="@drawable/ic_message"
             android:drawablePadding="8dp"
-            android:hint="Сіздің email"
+            android:hint="@string/your_email"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="5dp"
+            android:paddingHorizontal="16dp"
             android:paddingVertical="16dp"
-            android:paddingStart="16dp"
             android:textColorHint="@color/grey_400"
-            android:textSize="16dp" />
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/tvTextErrorEmail"
@@ -84,9 +87,9 @@
             android:layout_marginTop="15dp"
             android:visibility="gone"
             android:fontFamily="@font/sf_regular"
-            android:text="Қате формат"
+            android:text="@string/wrong_format"
             android:textColor="@color/red"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <TextView
@@ -94,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_bold"
-        android:text="Құпия сөз"
+        android:text="@string/password"
         android:textColor="@color/grey_900"
         android:textSize="14sp"
         android:layout_marginTop="15dp"
@@ -105,44 +108,46 @@
         android:id="@+id/editTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:background="@drawable/background_edittext_focus_action_12dp"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="8dp"
-        android:hint="Сіздің құпия сөзіңіз"
+        android:hint="@string/your_password"
         android:inputType="textPassword"
-        android:layout_marginTop="5dp"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
-        android:paddingStart="16dp"
         android:textColorHint="@color/grey_400"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+        tools:ignore="Autofill,TextContrastCheck" />
 
     <ImageButton
         android:id="@+id/btnShowPassword"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/ic_show"
         android:backgroundTint="@color/fui_transparent"
-        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_show"
         app:layout_constraintBottom_toBottomOf="@id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@id/editTextPassword"
         app:layout_constraintTop_toTopOf="@+id/editTextPassword"
-        app:layout_constraintEnd_toEndOf="@id/editTextPassword"/>
+        tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/btnForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_semibold"
-        android:text="Құпия сөзді ұмыттыңыз ба?"
-        android:textColor="@color/primary_300"
-        android:textSize="14sp"
         android:layout_marginTop="16dp"
         android:clickable="true"
         android:focusable="true"
+        android:fontFamily="@font/sf_semibold"
+        android:text="@string/forgot_your_password"
+        android:textColor="@color/primary_300"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -160,9 +165,9 @@
             android:visibility="gone"
             android:layout_gravity="center"
             android:fontFamily="@font/sf_regular"
-            android:text="Мұндай email-ы бар пайдаланушы тіркелген"
+            android:text="@string/such_email_registered"
             android:textColor="@color/red"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
@@ -173,10 +178,10 @@
             android:background="@drawable/background_button_12dp_circle"
             android:backgroundTint="@color/primary_500"
             android:fontFamily="@font/sf_semibold"
-            android:text="Кіру"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="normal"
             android:layout_marginTop="40dp" />
 
@@ -191,20 +196,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_regular"
-                android:text="Аккаунтыныз жоқ па? "
+                android:text="@string/not_have_account"
+                android:textColor="@color/grey_400"
                 android:textSize="14sp"
-                android:textColor="@color/grey_400"/>
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/btnRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Тіркелу"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_semibold"
+                android:text="@string/registration"
                 android:textColor="@color/primary_300"
                 android:textSize="14sp"
-                android:fontFamily="@font/sf_semibold"
-                android:clickable="true"
-                android:focusable="true" />
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
     </LinearLayout>

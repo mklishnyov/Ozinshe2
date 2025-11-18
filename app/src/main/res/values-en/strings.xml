@@ -17,4 +17,23 @@
     <string name="screenshots_about">Screenshots</string>
     <string name="similar_tv_series">Similar TV series</string>
     <string name="total_about">Total</string>
+    <string name="greeting_login">Hello</string>
+    <string name="log_in_to_your_account">Log in to your account</string>
+    <string name="your_email">Your email</string>
+    <string name="wrong_format">Wrong format</string>
+    <string name="password">Password</string>
+    <string name="your_password">Your password</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="such_email_registered">A user with such an email is registered</string>
+    <string name="login">Login</string>
+    <string name="not_have_account">"Do not have an account? "</string>
+    <string name="registration">Sign up</string>
+    <string name="skip_onboarding">Skip</string>
+    <string name="further_onboarding">Further</string>
+    <string name="fill_data">Fill in the data</string>
+    <string name="repeat_password">Repeat the password</string>
+    <string name="you_have_account">"Do you have an account? "</string>
+    <string name="season">1 season</string>
+    <string name="welcome_onboarding">Welcome to ÖZINŞE!</string>
+    <string name="profile_toolbar">Profile</string>
 </resources>

@@ -10,6 +10,8 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.ozinshe20.R
 import com.example.ozinshe20.data.SharedProvider
 import com.example.ozinshe20.databinding.FragmentProfileBinding
 import kotlinx.coroutines.launch
@@ -49,7 +51,13 @@ class ProfileFragment : Fragment(), OnLanguageSelectedLIstener {
             bottomSheet.show(childFragmentManager, bottomSheet.tag)
         }
 
+        binding.toolbarProfile.btnExit.setOnClickListener {
+            findNavController().navigate(
+                ProfileFragmentDirections.actionProfileFragmentToLoginFragment()
+            )
+        }
 
+        binding.userEmail.text = SharedProvider(requireContext()).getEmail()
     }
 
     override fun onLanguageSelected(language: String) {
