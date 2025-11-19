@@ -2,6 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorOnPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,50 +20,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:id="@+id/imgProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_icon_profile"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarProfile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="ContentDescription" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="251dp"
+        android:background="?attr/colorPrimaryVariant"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarProfile">
 
-    <TextView
-        android:id="@+id/profileTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/my_profile"
-        android:fontFamily="@font/sf_bold"
-        android:textColor="@color/grey_900"
-        android:textSize="24sp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/imgProfile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_profile"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/userEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:fontFamily="@font/sf_regular"
-        android:textColor="@color/grey_400"
-        android:textSize="14sp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/profileTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_profile"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="24sp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/imgProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:fontFamily="@font/sf_regular"
+            android:textColor="@color/grey_400"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/profileTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="24dp"
         android:paddingHorizontal="24dp"
-        app:layout_constraintTop_toBottomOf="@id/userEmail"
+        app:layout_constraintTop_toBottomOf="@id/layoutProfile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -80,7 +89,7 @@
                 android:text="@string/personal_data"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
-                android:textColor="@color/grey_800"
+                android:textColor="?attr/colorTertiary"
                 android:layout_gravity="center_vertical"/>
 
             <TextView
@@ -124,7 +133,7 @@
                 android:text="@string/change_password"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
-                android:textColor="@color/grey_800"
+                android:textColor="?attr/colorTertiary"
                 android:layout_gravity="center_vertical"/>
 
             <ImageButton
@@ -157,7 +166,7 @@
                 android:text="@string/profile_language"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
-                android:textColor="@color/grey_800"
+                android:textColor="?attr/colorTertiary"
                 android:layout_gravity="center_vertical"/>
 
             <TextView
@@ -202,7 +211,7 @@
                 android:text="@string/terms_and_conditions"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
-                android:textColor="@color/grey_800"
+                android:textColor="?attr/colorTertiary"
                 android:layout_gravity="center_vertical"/>
 
             <ImageButton
@@ -235,17 +244,18 @@
                 android:text="@string/night_mode"
                 android:fontFamily="@font/sf_medium"
                 android:textSize="16sp"
-                android:textColor="@color/grey_800"
+                android:textColor="?attr/colorTertiary"
                 android:layout_gravity="center_vertical"/>
 
-            <com.google.android.material.materialswitch.MaterialSwitch
+            <com.kyleduo.switchbutton.SwitchButton
                 android:id="@+id/switchDayNight"
                 android:layout_width="52dp"
                 android:layout_height="32dp"
+                android:checked="false"
                 android:layout_gravity="center_vertical"
-                app:thumbTint="@color/white"
-                app:trackDecorationTint="@color/grey_200"
-                app:trackTint="@color/grey_200"
+                app:kswBackColor="?attr/colorButtonNormal"
+                app:kswThumbColor="@color/white"
+                app:kswThumbMargin="4dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>

@@ -13,8 +13,8 @@
         android:pathData="M23,14L17,20L23,26"
         android:strokeLineJoin="round"
         android:strokeWidth="1.5"
-        android:fillColor="#00000000"
-        android:strokeColor="#111827"
+        android:fillColor="@color/fui_transparent"
+        android:strokeColor="?attr/colorSecondary"
         android:strokeLineCap="round"/>
   </group>
 </vector>

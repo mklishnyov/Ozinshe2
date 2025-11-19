@@ -33,6 +33,14 @@ class SharedProvider(private val context: Context) {
         return preference.getString("email", null)
     }
 
+    fun saveDayMode(mode: Boolean) {
+        preference.edit { putBoolean("dayNightMode", mode) }
+    }
+
+    fun getDayMode(): Boolean {
+        return preference.getBoolean("dayNightMode", true)
+    }
+
     fun clearShared() {
         preference.edit { clear() }
     }

@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Ozinshe20" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.Ozinshe20" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorButtonNormal">@color/grey_200</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/grey_50</item>
+        <item name="colorSecondary">@color/grey_900</item>
+        <item name="colorSecondaryVariant">@color/grey_800</item>
+        <item name="colorTertiaryContainer">@color/grey_300</item>
+        <item name="colorTertiary">@color/grey_800</item>
     </style>
-
-    <style name="Theme.Ozinshe20" parent="Base.Theme.Ozinshe20" />
 </resources>

@@ -88,4 +88,7 @@ dependencies {
     implementation ("com.github.chrisbanes:PhotoView:2.3.0")
 
     implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0")
+
+    //Switch Button:
+    implementation ("com.kyleduo.switchbutton:library:2.1.0")
 }
