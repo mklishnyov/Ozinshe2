@@ -8,5 +8,11 @@
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorTertiaryContainer">@color/grey_800</item>
         <item name="colorTertiary">@color/grey_200</item>
+        <item name="colorTertiaryFixed">@color/fui_transparent</item>
+        <item name="colorOnTertiaryFixed">@color/grey_500</item>
+        <item name="colorTertiaryFixedDim">@color/grey_800</item>
+        <item name="colorOnTertiaryFixedVariant">@color/grey_50</item>
+        <item name="colorOnTertiaryContainer">@color/grey_50</item>
+        <item name="colorOnTertiary">@color/grey_700</item>
     </style>
 </resources>

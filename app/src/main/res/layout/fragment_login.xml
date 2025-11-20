@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.login.LoginFragment">
 
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_bold"
         android:text="@string/greeting_login"
-        android:textColor="@color/grey_900"
+        android:textColor="?attr/colorSecondary"
         android:textSize="24sp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/btnBackLoginFragment"
@@ -47,7 +48,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_bold"
         android:text="@string/email"
-        android:textColor="@color/grey_900"
+        android:textColor="?attr/colorSecondary"
         android:textSize="14sp"
         android:layout_marginTop="29dp"
         app:layout_constraintStart_toStartOf="@+id/txtAccLogin"
@@ -72,6 +73,7 @@
             android:background="@drawable/background_edittext_focus_action_12dp"
             android:drawableStart="@drawable/ic_message"
             android:drawablePadding="8dp"
+            android:backgroundTint="?attr/colorPrimaryVariant"
             android:hint="@string/your_email"
             android:inputType="textEmailAddress"
             android:paddingHorizontal="16dp"
@@ -98,7 +100,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_bold"
         android:text="@string/password"
-        android:textColor="@color/grey_900"
+        android:textColor="?attr/colorSecondary"
         android:textSize="14sp"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -197,7 +199,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_regular"
                 android:text="@string/not_have_account"
-                android:textColor="@color/grey_400"
+                android:textColor="?attr/colorOnTertiaryContainer"
                 android:textSize="14sp"
                 tools:ignore="TextContrastCheck" />
 

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.home.HomeFragment">
 
@@ -53,7 +54,7 @@
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sf_bold"
-                android:textColor="@color/grey_900"/>
+                android:textColor="?attr/colorSecondary"/>
 
             <TextView
                 android:id="@+id/categoryEtc"
@@ -101,7 +102,7 @@
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sf_bold"
-                android:textColor="@color/grey_900"/>
+                android:textColor="?attr/colorSecondary"/>
 
             <TextView
                 android:id="@+id/categoryEtc1"
@@ -149,7 +150,7 @@
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sf_bold"
-                android:textColor="@color/grey_900"/>
+                android:textColor="?attr/colorSecondary"/>
 
             <TextView
                 android:id="@+id/categoryEtc2"

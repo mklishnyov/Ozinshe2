@@ -118,7 +118,7 @@
             android:layout_marginTop="24dp"
             android:fontFamily="@font/sf_bold"
             android:text=""
-            android:textColor="@color/grey_900"
+            android:textColor="?attr/colorSecondary"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -241,7 +241,7 @@
             android:layout_marginTop="24dp"
             android:fontFamily="@font/sf_semibold"
             android:text="@string/sections_about"
-            android:textColor="@color/grey_900"
+            android:textColor="?attr/colorSecondary"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -276,7 +276,7 @@
             android:layout_marginTop="68dp"
             android:fontFamily="@font/sf_semibold"
             android:text="@string/screenshots_about"
-            android:textColor="@color/grey_900"
+            android:textColor="?attr/colorSecondary"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -299,7 +299,7 @@
             android:layout_marginTop="32dp"
             android:fontFamily="@font/sf_semibold"
             android:text="@string/similar_tv_series"
-            android:textColor="@color/grey_900"
+            android:textColor="?attr/colorSecondary"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintTop_toBottomOf="@+id/rcViewScreenshots" />
