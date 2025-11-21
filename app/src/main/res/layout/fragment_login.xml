@@ -73,7 +73,6 @@
             android:background="@drawable/background_edittext_focus_action_12dp"
             android:drawableStart="@drawable/ic_message"
             android:drawablePadding="8dp"
-            android:backgroundTint="?attr/colorPrimaryVariant"
             android:hint="@string/your_email"
             android:inputType="textEmailAddress"
             android:paddingHorizontal="16dp"

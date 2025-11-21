@@ -6,6 +6,7 @@
         <item name="colorOnPrimary">@color/grey_900</item>
         <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorSecondaryContainer">@color/grey_600</item>
         <item name="colorTertiaryContainer">@color/grey_800</item>
         <item name="colorTertiary">@color/grey_200</item>
         <item name="colorTertiaryFixed">@color/fui_transparent</item>
@@ -14,5 +15,6 @@
         <item name="colorOnTertiaryFixedVariant">@color/grey_50</item>
         <item name="colorOnTertiaryContainer">@color/grey_50</item>
         <item name="colorOnTertiary">@color/grey_700</item>
+        <item name="itemBackground">@drawable/ic_shadow_onboarding_night</item>
     </style>
 </resources>
