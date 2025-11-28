@@ -28,6 +28,7 @@
             app:popUpTo="@id/onboardingFragment"
             app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.ozinshe20.presentation.login.LoginFragment"
