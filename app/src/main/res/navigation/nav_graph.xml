@@ -59,6 +59,7 @@
                 app:argType="integer" />
         </action>
     </fragment>
+
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.ozinshe20.presentation.register.RegisterFragment"
