@@ -84,6 +84,7 @@
             android:id="@+id/action_profileFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.ozinshe20.presentation.SearchFragment"
